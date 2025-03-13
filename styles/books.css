@@ -1,7 +1,7 @@
 .book_container{
     width: 300px;
     height: 400px;
-    background-color: blue;
+    background-color: aqua;
     border: 1px solid white;
     border-radius: 5%;
 }
@@ -30,5 +30,5 @@
 
 .book_input_section{
     height: 30px;
-    background-color: aquamarine;
+    background-color: white;
 }
