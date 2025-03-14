@@ -31,13 +31,6 @@ header{
 
 
 /* Später wieder raus nehmen! */
-.test_section{
-    width: 300px;
-    height: 400px;
-    background-color: #0d3240;
-    border-radius: 5%;
-    border: 1px solid white;
-}
 .seperator{
     height: 50px;
 }
