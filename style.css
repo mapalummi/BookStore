@@ -31,6 +31,7 @@ header{
 .header_content img{
     width: 60px;
     height: 60px;
+    filter: invert(100%);
 }
 
 .content_section{

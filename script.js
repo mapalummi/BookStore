@@ -4,3 +4,13 @@ function renderBooks(){
         document.getElementById('book_container').innerHTML += getBookTemplate(i);
     }
 }
+
+function likeButton(){
+    document.getElementById('like_btn').classList.toggle('likes_toggle');
+}
+
+
+// Onclick Funktion für Inputfeld 
+
+// Inputfeld leeren
+
