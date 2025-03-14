@@ -3,10 +3,12 @@
     height: 400px;
     background-color: #0d3240;
     border-radius: 5%;
+    border: 1px solid white;
 }
 
 .book_container h1{
     margin: auto;
+    color: white;
 }
 
 .book_img_section{
