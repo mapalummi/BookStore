@@ -42,7 +42,7 @@
     <div class="container3">
         <div id="price_field" class="price">19,99 €</div>
         <div id="like_field" class="likes">
-            <p>1234</p>
+            <p id="like_counter">1234</p>
             <a id="like_btn" onclick="likeButton()" href="#">
                 <img src="./assets/icons/icons8-like-gefüllt.png"  alt="">
             </a>
@@ -73,15 +73,19 @@
     <div class="container5">
         <h4>Kommentare</h4>
         <div class="container6">
-            <div id="comment_section" class="overflow">
+            <div id="comment_section" class="comment_container">
+            
+                <div id="new_comments" class="comment_content"></div>
+            <div class="comment_content">
                 <span>[Tester123]</span>
                 <span>: Jedoch ist das klassische Personal Training auf Dauer ein recht teurer Spaß und sollte vorwiegend Trainingsanfängern oder betreuungsintensiven Personen vorbehalten sein.</span>
+            </div>
+
             </div>
         </div>
 
         <div class="input_container">
             <input id="input" class="input_field" type="text" placeholder="Schreib deinen Kommentar ...">
-           <!-- oncklick setzen -->
             <a onclick="sendComment()" class="send_button" href="#">
                 <img src="./assets/icons/icons8-papierflieger.png" alt="">
             </a>

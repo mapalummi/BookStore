@@ -24,3 +24,11 @@ function getBookTemplate(i){
         </div>
     `;
 }
+
+
+function getInputTemplate(inputText){
+    return `
+        <span>[Leser456]</span>
+        <span>:${inputText} </span>
+`;
+}
