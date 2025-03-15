@@ -15,11 +15,14 @@ function sendComment(){
     let inputText = document.getElementById('input').value;
 
     if (inputText == "") {
-        alert('No Text')
+        alert('Bitte schreibe einen Kommentar')
     } else {
+        document.getElementById('comment_section').innerHTML += /*html*/`
+        <span>[Tester123]</span>
+        <span>:${inputText} </span>
+`;
 
-
-        document.getElementById('input').innerHTML = "";
+        document.getElementById('input').value = "";
 }
 
 }
