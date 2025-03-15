@@ -11,6 +11,16 @@ function likeButton(){
 
 
 // Onclick Funktion für Inputfeld 
+function sendComment(){
+    let inputText = document.getElementById('input').value;
 
-// Inputfeld leeren
+    if (inputText == "") {
+        alert('No Text')
+    } else {
+
+
+        document.getElementById('input').innerHTML = "";
+}
+
+}
 

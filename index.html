@@ -40,7 +40,7 @@
 
 
     <div class="container3">
-        <div id="price_field" class="price">Price</div>
+        <div id="price_field" class="price">19,99 €</div>
         <div id="like_field" class="likes">
             <p>1234</p>
             <a id="like_btn" onclick="likeButton()" href="#">
@@ -73,14 +73,16 @@
     <div class="container5">
         <h4>Kommentare</h4>
         <div class="container6">
-            <span></span>
-            <div class="overflow">Die Kombination von mechanischer HF-Hygienefiltration, PP-Carbonmatrix, Carbonblock+-Filter, TFC-Molekulartrennmembran</div>
+            <div class="overflow">
+                <span>[Tester123]</span>
+                <span>: Jedoch ist das klassische Personal Training auf Dauer ein recht teurer Spaß und sollte vorwiegend Trainingsanfängern oder betreuungsintensiven Personen vorbehalten sein.</span>
+            </div>
         </div>
 
         <div class="input_container">
             <input id="input" class="input_field" type="text" placeholder="Schreib deinen Kommentar ...">
            <!-- oncklick setzen -->
-            <a class="send_button" href="#">
+            <a onclick="sendComment()" class="send_button" href="#">
                 <img src="./assets/icons/icons8-papierflieger.png" alt="">
             </a>
         </div>
