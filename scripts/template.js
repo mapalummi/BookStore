@@ -10,25 +10,83 @@
 //     `;
 // }
 
-
 function getBookTemplate(i){
-    return `<div>
-            <h1>${books[i].title}</h1>
+    return `<div class="test_container_section">
+    <div class="container1">
+        <h1>${books[i].title}</h1>
+    </div>
+
+    <div class="container2">
+        <img src="./assets/img/buch03.png" alt="">
+    </div>
+
+
+    <div class="container3">
+        <div id="price_field" class="price">${books[i].price.toFixed(2)} €</div>
+        <div id="like_field" class="like_section">
+            <p id="like_counter" class="like_count">${books[i].likes}</p>
+            <a id="like_btn" onclick="likeButton()" href="#">
+                <img id="heart_img" class="like_img" src="./assets/icons/icons8-like-gefüllt.png"  alt="">
+            </a>
         </div>
-        <div class="book_img_section"><img src="./assets/img/buch03.png" alt=""></div>
-        <div class="book_info_section">Autor:${books[i].author}</div>
-        <div class="book_comment_section">Kommentare</div>
-        <div class="book_input_section">
-            <input type="text" placeholder="Schreib deinen Kommentar ...">
-            <a class="send_btn" href="#"><img src="./assets/icons/icons8-gesendet.png" alt=""></a>
+    </div>
+
+    <div class="container4">
+        <table>
+            <tr>
+                <td>Author</td>
+                <td>:</td>
+                <td>${books[i].author}</td>
+            </tr>
+            <tr>
+                <td>Erscheinungsjahr</td>
+                <td>:</td>
+                <td>${books[i].publishedYear}</td>
+            </tr>
+            <tr>
+                <td>Genre</td>
+                <td>:</td>
+                <td>${books[i].genre}</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div class="container5">
+        <h4>Kommentare</h4>
+        <div class="container6">
+            <div id="comment_section" class="comment_container">
+            
+                <div id="new_comments" class="input_comment_content"></div>
+            <div class="comment_content">
+                <span>[Tester123]</span>
+                <span>: Jedoch ist das klassische Personal Training auf Dauer ein recht teurer Spaß und sollte vorwiegend Trainingsanfängern oder betreuungsintensiven Personen vorbehalten sein.</span>
+            </div>
+
+            </div>
         </div>
+
+        <div class="input_container">
+            <input id="input" class="input_field" type="text" placeholder="Schreib deinen Kommentar ...">
+            <a onclick="sendComment()" class="send_button" href="#">
+                <img src="./assets/icons/icons8-papierflieger.png" alt="">
+            </a>
+        </div>
+
+    </div>
+    </div>
     `;
 }
 
 
 function getInputTemplate(inputText){
     return `
-        <span>[Leser456]</span>
-        <span>:${inputText} </span>
+        <table>
+          <tr>
+            <td>[Leser456]</td>
+            <td>:</td>
+            <td>${inputText}</td>
+          </tr>
+          </table>
 `;
 }

@@ -5,7 +5,7 @@
   background-color: #0d3240;
   border-radius: 5%;
   border: 1px solid white;
-  margin: 12px;
+  margin: 38px;
 }
 
 .container1 {
@@ -19,6 +19,7 @@
 
 .container1 h1 {
   margin: 0;
+  font-size: 24px;
 }
 
 .container2 {
@@ -125,7 +126,7 @@
   width: 24px;
   height: 24px;
   float: left;
-  filter: invert(100%);
+  filter: invert(65%);
 }
 
 /*  */
@@ -155,4 +156,8 @@
 .comment_content {
   display: flex;
   gap: 18px;
+}
+.input_comment_content{
+  display: flex;
+  flex-direction: column-reverse;
 }

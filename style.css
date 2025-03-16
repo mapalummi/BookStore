@@ -40,9 +40,3 @@ header{
     display: flex;
     justify-content: center;
 }
-
-
-/* Später wieder raus nehmen! */
-.seperator{
-    height: 50px;
-}
