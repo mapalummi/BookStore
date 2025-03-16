@@ -52,25 +52,25 @@
   font-weight: bold;
 }
 
-.likes {
+.like_section {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.likes p {
+.like_count {
   margin: 0;
   padding-right: 12px;
 }
 
-.likes img {
+.like_img {
   width: 34px;
   height: 34px;
   filter: invert(50%);
 }
 
-.likes_toggle img {
+.liked {
   filter: invert(0%);
 }
 

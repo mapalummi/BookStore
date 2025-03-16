@@ -12,7 +12,7 @@
 
     
     <script src="./scripts/db.js"></script>
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
     <script src="./scripts/template.js"></script>
 
 </head>
@@ -41,10 +41,10 @@
 
     <div class="container3">
         <div id="price_field" class="price">19,99 €</div>
-        <div id="like_field" class="likes">
-            <p id="like_counter">1234</p>
+        <div id="like_field" class="like_section">
+            <p id="like_counter" class="like_count">1234</p>
             <a id="like_btn" onclick="likeButton()" href="#">
-                <img src="./assets/icons/icons8-like-gefüllt.png"  alt="">
+                <img id="heart_img" class="like_img" src="./assets/icons/icons8-like-gefüllt.png"  alt="">
             </a>
         </div>
     </div>

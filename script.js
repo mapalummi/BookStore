@@ -8,23 +8,65 @@ function renderBooks() {
 
 
 // Onclick Funktion für Like-Button:
-function likeButton() {
-  document.getElementById("like_btn").classList.toggle("likes_toggle");
-//   document.getElementById("like_btn").classList.add("likes_toggle");
+// function likeButton() {
+//   document.getElementById("heart_img").classList.toggle("liked");
 
+
+// let countNumber = document.getElementById("like_counter").innerHTML;
+// let newLikeNumber = parseFloat(countNumber);
+
+// document.getElementById('like_counter').innerHTML = /*html*/`
+//     ${newLikeNumber+1}
+// `;
+
+
+// let likedOrNot = document.getElementById("heart_img").classList.contains("liked");
+// console.log(likedOrNot);
+
+// if (likedOrNot == true) {
+//   console.log('Herz rot und Zahl um 1 erhöhen');
+// } else {
+//   console.log('Herz grau und Zahl um 1 reduzieren');
+// }
+
+// }
+
+
+// Onclick mit Like-Funktion und true/false Prüfung für den Counter:
+function likeButton() {
+  document.getElementById("heart_img").classList.toggle("liked");
 
 let countNumber = document.getElementById("like_counter").innerHTML;
 let newLikeNumber = parseFloat(countNumber);
 
-document.getElementById('like_counter').innerHTML = /*html*/`
+let likedOrNot = document.getElementById("heart_img").classList.contains("liked");
+// console.log(likedOrNot);
+
+if (likedOrNot == true) {
+  document.getElementById('like_counter').innerHTML = /*html*/`
     ${newLikeNumber+1}
 `;
-
-
-
-
-
+} else {
+  document.getElementById('like_counter').innerHTML = /*html*/`
+    ${newLikeNumber-1}
+`;
 }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
