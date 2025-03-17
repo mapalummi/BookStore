@@ -1,9 +1,15 @@
-// Buch-Content rendern
+
+function init(){
+  renderBooks();
+}
+
+
 function renderBooks() {
   for (let i = 0; i < books.length; i++) {
-    document.getElementById("book_container").innerHTML += getBookTemplate(i);
+      document.getElementById("book_container").innerHTML += getBookTemplate(i);
+    }
   }
-}
+
 
 
 // Onclick mit Like-Funktion und true/false Prüfung für den Counter:
@@ -39,15 +45,3 @@ function sendComment() {
     document.getElementById("input").value = "";
   }
 }
-
-
-// Kommentare auslesen lassen:
-// for (let i = 0; i < books.length; i++) {
-//   console.log(books[i].comments);
-// }
-
-
-for (let i = 0; i < books.length; i++) {
-  console.log(books[i].comments[1]);
-}
-

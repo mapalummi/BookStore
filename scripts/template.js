@@ -1,14 +1,4 @@
-// function getBookTemplate(i){
-//     return `<div>
-//                 <p>${books[i].title}</p>
-//                 <p>${books[i].author}</p>
-//                 <p>${books[i].likes}</p>
-//                 <p>${books[i].price}</p>
-//                 <p>${books[i].publishedYear}</p>
-//                 <p>${books[i].genre}</p>
-//             </div>
-//     `;
-// }
+
 
 function getBookTemplate(i){
     return `<div class="test_container_section">
@@ -62,9 +52,9 @@ function getBookTemplate(i){
 
             <table>
             <tr>
-                <td>[Tester123]</td>
+                <td>${books[i].author}</td>
                 <td>:</td>
-                <td>Jedoch ist das klassische Personal Training auf Dauer ein recht teurer Spaß und sollte vorwiegend Trainingsanfängern</td>
+                <td>Kommentar</td>
             </tr>
             </table>
 
