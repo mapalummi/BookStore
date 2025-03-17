@@ -1,5 +1,3 @@
-
-
 function getBookTemplate(i){
     return `<div class="master_container_section">
     <div class="container1">
@@ -9,7 +7,6 @@ function getBookTemplate(i){
     <div class="container2">
         <img src="./assets/img/buch03.png" alt="">
     </div>
-
 
     <div class="container3">
         <div id="price_field" class="price">${books[i].price.toFixed(2)} €</div>
@@ -21,7 +18,6 @@ function getBookTemplate(i){
                 <img id="heart_img${[i]}" class="like_img" src="./assets/icons/icons8-like-gefüllt.png"  alt="">
             </a>
         </div>
-
     </div>
 
     <div class="container4">
@@ -43,25 +39,20 @@ function getBookTemplate(i){
             </tr>
         </table>
     </div>
-
-
     <div class="container5">
         <h4>Kommentare</h4>
         <div class="container6">
             <div id="comment_section" class="comment_container">
-            
                 <div id="new_comments${i}" class="comment_content_style"></div>
                 <div id="comment_content${i}" class="comment_content_style"></div>
             </div>
         </div>
-
         <div class="input_container">
             <input id="input${i}" class="input_field" type="text" placeholder="Schreib deinen Kommentar ...">
             <a onclick="sendComment(${i})" class="send_button" href="#">
                 <img src="./assets/icons/icons8-papierflieger.png" alt="">
             </a>
         </div>
-
     </div>
     </div>
     `;
@@ -78,7 +69,6 @@ function getCommentTemplate(i,j){
           </table>
           `;
 }
-
 
 function getInputTemplate(inputText){
     return `
