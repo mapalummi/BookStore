@@ -1,40 +1,70 @@
-
 function init(){
   renderBooks();
 }
 
 
+
 function renderBooks() {
   for (let i = 0; i < books.length; i++) {
+
       document.getElementById("book_container").innerHTML += getBookTemplate(i);
+
+        for (let j = 0; j < books[i].comments.length; j++) {
+          document.getElementById(`test_row${i}`).innerHTML += /*html*/`
+            <td>${books[i].comments[j].name}</td>
+            <td>:</td>
+            <td>${books[i].comments[j].comment}</td>
+          `;
+      }
     }
   }
+
+  
+
+
+
 
 
 
 // Onclick mit Like-Funktion und true/false Prüfung für den Counter:
 function likeButton() {
-  document.getElementById("heart_img").classList.toggle("liked");
+  
+for (let i = 0; i < books.length; i++) {
+  
+  document.getElementById(`heart_img${i}`).classList.toggle("liked");
 
-  let countNumber = document.getElementById("like_counter").innerHTML;
+  let countNumber = document.getElementById(`like_counter${i}`).innerHTML;
   let newLikeNumber = parseFloat(countNumber);
 
-  let likedOrNot = document.getElementById("heart_img").classList.contains("liked");
+  let likedOrNot = document.getElementById(`heart_img${i}`).classList.contains("liked");
 
+
+  
   if (likedOrNot == true) {
-    document.getElementById("like_counter").innerHTML = /*html*/ `
+    document.getElementById(`like_counter${i}`).innerHTML = /*html*/ `
     ${newLikeNumber + 1}
 `;
   } else {
-    document.getElementById("like_counter").innerHTML = /*html*/ `
+    document.getElementById(`like_counter${i}`).innerHTML = /*html*/ `
     ${newLikeNumber - 1}
 `;
   }
+
+}
+  
 }
 
 
+
+
+
+
+
+
 // Onclick Funktion für Inputfeld
+// Muss noch angepasst werden!!!
 function sendComment() {
+
   let inputText = document.getElementById("input").value;
 
   if (inputText == "") {
@@ -45,3 +75,4 @@ function sendComment() {
     document.getElementById("input").value = "";
   }
 }
+

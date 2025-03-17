@@ -13,12 +13,15 @@ function getBookTemplate(i){
 
     <div class="container3">
         <div id="price_field" class="price">${books[i].price.toFixed(2)} €</div>
+
         <div id="like_field" class="like_section">
-            <p id="like_counter" class="like_count">${books[i].likes}</p>
+            <p id="like_counter${[i]}" class="like_count">${books[i].likes}</p>
+
             <a id="like_btn" onclick="likeButton()" href="#">
-                <img id="heart_img" class="like_img" src="./assets/icons/icons8-like-gefüllt.png"  alt="">
+                <img id="heart_img${[i]}" class="like_img" src="./assets/icons/icons8-like-gefüllt.png"  alt="">
             </a>
         </div>
+
     </div>
 
     <div class="container4">
@@ -51,10 +54,7 @@ function getBookTemplate(i){
             <div class="comment_content">
 
             <table>
-            <tr>
-                <td>${books[i].author}</td>
-                <td>:</td>
-                <td>Kommentar</td>
+            <tr id="test_row${[i]}">
             </tr>
             </table>
 
