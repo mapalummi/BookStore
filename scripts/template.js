@@ -59,8 +59,15 @@ function getBookTemplate(i){
             
                 <div id="new_comments" class="input_comment_content"></div>
             <div class="comment_content">
-                <span>[Tester123]</span>
-                <span>: Jedoch ist das klassische Personal Training auf Dauer ein recht teurer Spaß und sollte vorwiegend Trainingsanfängern oder betreuungsintensiven Personen vorbehalten sein.</span>
+
+            <table>
+            <tr>
+                <td>[Tester123]</td>
+                <td>:</td>
+                <td>Jedoch ist das klassische Personal Training auf Dauer ein recht teurer Spaß und sollte vorwiegend Trainingsanfängern</td>
+            </tr>
+            </table>
+
             </div>
 
             </div>
