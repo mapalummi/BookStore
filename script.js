@@ -1,3 +1,4 @@
+
 function init(){
   renderBooks();
 }
@@ -5,29 +6,18 @@ function init(){
 
 
 function renderBooks() {
+  
   for (let i = 0; i < books.length; i++) {
 
-      document.getElementById("book_container").innerHTML += getBookTemplate(i);
+    document.getElementById("book_container").innerHTML += getBookTemplate(i);
 
         for (let j = 0; j < books[i].comments.length; j++) {
-          document.getElementById(`comment_content${i}`).innerHTML += /*html*/`
-          <table>
-          <tr>
-            <td>[${books[i].comments[j].name}]</td>
-            <td>:</td>
-            <td>${books[i].comments[j].comment}</td>
-          </tr>
-          </table>
-          `;
+
+          document.getElementById(`comment_content${i}`).innerHTML += getCommentTemplate(i,j);
+
       }
   }
 }
-
-  
-  
-  
-
-
 
 
 
@@ -57,10 +47,7 @@ function likeButton(i) {
   
 
 
-
-
 // Onclick Funktion für Inputfeld
-// Muss noch angepasst werden!!!
 function sendComment(i) {
 
   let inputText = document.getElementById(`input${i}`).value;
@@ -69,7 +56,37 @@ function sendComment(i) {
     alert("Bitte schreibe einen Kommentar");
   } else {
     document.getElementById(`new_comments${i}`).innerHTML += getInputTemplate(inputText);
-
     document.getElementById(`input${i}`).value = "";
   }
+
 }
+
+
+
+
+
+// function saveData(i){
+//   let inputRef = document.getElementById(`input${i}`).value;
+
+//   if (inputRef.value != ""){
+//       newArray.push(inputRef.value);
+//   }
+
+//   saveToLocalStorage();
+
+//   inputRef.value = "";
+// }
+
+
+// function saveToLocalStorage(){
+//   localStorage.setItem("newArray", JSON.stringify(newArray));
+// }
+
+
+// function getFromLocalStorage(){
+//   let myArr = JSON.parse(localStorage.getItem("newArray"));
+  
+//   if (myArr != null) {
+//     newArray = myArr
+// }  
+// }

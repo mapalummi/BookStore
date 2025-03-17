@@ -1,7 +1,7 @@
 
 
 function getBookTemplate(i){
-    return `<div class="test_container_section">
+    return `<div class="master_container_section">
     <div class="container1">
         <h1>${books[i].title}</h1>
     </div>
@@ -67,8 +67,16 @@ function getBookTemplate(i){
     `;
 }
 
-function getCommentTemplate(){
-    
+function getCommentTemplate(i,j){
+    return `
+          <table>
+          <tr>
+            <td>[${books[i].comments[j].name}]</td>
+            <td>:</td>
+            <td>${books[i].comments[j].comment}</td>
+          </tr>
+          </table>
+          `;
 }
 
 
