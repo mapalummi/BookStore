@@ -17,7 +17,7 @@ function getBookTemplate(i){
         <div id="like_field" class="like_section">
             <p id="like_counter${[i]}" class="like_count">${books[i].likes}</p>
 
-            <a id="like_btn" onclick="likeButton()" href="#">
+            <a id="like_btn${[i]}" onclick="likeButton(${[i]})" href="#">
                 <img id="heart_img${[i]}" class="like_img" src="./assets/icons/icons8-like-gefüllt.png"  alt="">
             </a>
         </div>
@@ -50,22 +50,14 @@ function getBookTemplate(i){
         <div class="container6">
             <div id="comment_section" class="comment_container">
             
-                <div id="new_comments" class="input_comment_content"></div>
-            <div class="comment_content">
-
-            <table>
-            <tr id="test_row${[i]}">
-            </tr>
-            </table>
-
-            </div>
-
+                <div id="new_comments" class="comment_content_style"></div>
+                <div id="comment_content${i}" class="comment_content_style"></div>
             </div>
         </div>
 
         <div class="input_container">
             <input id="input" class="input_field" type="text" placeholder="Schreib deinen Kommentar ...">
-            <a onclick="sendComment()" class="send_button" href="#">
+            <a onclick="sendComment(${i})" class="send_button" href="#">
                 <img src="./assets/icons/icons8-papierflieger.png" alt="">
             </a>
         </div>

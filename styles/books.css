@@ -153,12 +153,17 @@
   -webkit-box-shadow: inset 0 0 6px #73c4e0;
 }
 
-.comment_content {
+.comment_content_style {
   display: flex;
   gap: 18px;
 }
 
-.input_comment_content{
+.comment_content_style{
   display: flex;
   flex-direction: column-reverse;
+  align-items: flex-start;
+}
+
+.comment_content_style td{
+  vertical-align: top;
 }

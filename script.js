@@ -10,26 +10,29 @@ function renderBooks() {
       document.getElementById("book_container").innerHTML += getBookTemplate(i);
 
         for (let j = 0; j < books[i].comments.length; j++) {
-          document.getElementById(`test_row${i}`).innerHTML += /*html*/`
+          document.getElementById(`comment_content${i}`).innerHTML += /*html*/`
+          <table>
+          <tr>
             <td>${books[i].comments[j].name}</td>
             <td>:</td>
             <td>${books[i].comments[j].comment}</td>
+          </tr>
+          </table>
           `;
       }
-    }
   }
+}
 
   
-
+  
+  
 
 
 
 
 
 // Onclick mit Like-Funktion und true/false Prüfung für den Counter:
-function likeButton() {
-  
-for (let i = 0; i < books.length; i++) {
+function likeButton(i) {
   
   document.getElementById(`heart_img${i}`).classList.toggle("liked");
 
@@ -39,11 +42,11 @@ for (let i = 0; i < books.length; i++) {
   let likedOrNot = document.getElementById(`heart_img${i}`).classList.contains("liked");
 
 
-  
   if (likedOrNot == true) {
     document.getElementById(`like_counter${i}`).innerHTML = /*html*/ `
     ${newLikeNumber + 1}
 `;
+
   } else {
     document.getElementById(`like_counter${i}`).innerHTML = /*html*/ `
     ${newLikeNumber - 1}
@@ -52,11 +55,6 @@ for (let i = 0; i < books.length; i++) {
 
 }
   
-}
-
-
-
-
 
 
 
@@ -75,4 +73,3 @@ function sendComment() {
     document.getElementById("input").value = "";
   }
 }
-
