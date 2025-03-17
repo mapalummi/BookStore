@@ -13,7 +13,7 @@ function renderBooks() {
           document.getElementById(`comment_content${i}`).innerHTML += /*html*/`
           <table>
           <tr>
-            <td>${books[i].comments[j].name}</td>
+            <td>[${books[i].comments[j].name}]</td>
             <td>:</td>
             <td>${books[i].comments[j].comment}</td>
           </tr>
@@ -61,15 +61,15 @@ function likeButton(i) {
 
 // Onclick Funktion für Inputfeld
 // Muss noch angepasst werden!!!
-function sendComment() {
+function sendComment(i) {
 
-  let inputText = document.getElementById("input").value;
+  let inputText = document.getElementById(`input${i}`).value;
 
   if (inputText == "") {
     alert("Bitte schreibe einen Kommentar");
   } else {
-    document.getElementById("new_comments").innerHTML += getInputTemplate(inputText);
+    document.getElementById(`new_comments${i}`).innerHTML += getInputTemplate(inputText);
 
-    document.getElementById("input").value = "";
+    document.getElementById(`input${i}`).value = "";
   }
 }

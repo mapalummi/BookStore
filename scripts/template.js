@@ -50,13 +50,13 @@ function getBookTemplate(i){
         <div class="container6">
             <div id="comment_section" class="comment_container">
             
-                <div id="new_comments" class="comment_content_style"></div>
+                <div id="new_comments${i}" class="comment_content_style"></div>
                 <div id="comment_content${i}" class="comment_content_style"></div>
             </div>
         </div>
 
         <div class="input_container">
-            <input id="input" class="input_field" type="text" placeholder="Schreib deinen Kommentar ...">
+            <input id="input${i}" class="input_field" type="text" placeholder="Schreib deinen Kommentar ...">
             <a onclick="sendComment(${i})" class="send_button" href="#">
                 <img src="./assets/icons/icons8-papierflieger.png" alt="">
             </a>
@@ -65,6 +65,10 @@ function getBookTemplate(i){
     </div>
     </div>
     `;
+}
+
+function getCommentTemplate(){
+    
 }
 
 
