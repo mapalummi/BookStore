@@ -14,7 +14,7 @@ function getBookTemplate(i){
         <div id="like_field" class="like_section">
             <p id="like_counter${[i]}" class="like_count">${books[i].likes}</p>
 
-            <a id="like_btn${[i]}" onclick="likeButton(${[i]})" href="#">
+            <a id="like_btn${[i]}" onclick="likeButton(${[i]})" href="javascript:void(0)">
                 <img id="heart_img${[i]}" class="like_img" src="./assets/icons/icons8-like-gefüllt.png"  alt="">
             </a>
         </div>
@@ -23,7 +23,7 @@ function getBookTemplate(i){
     <div class="container4">
         <table>
             <tr>
-                <td>Author</td>
+                <td>Autor</td>
                 <td>:</td>
                 <td>${books[i].author}</td>
             </tr>
@@ -49,7 +49,7 @@ function getBookTemplate(i){
         </div>
         <div class="input_container">
             <input id="input${i}" class="input_field" type="text" placeholder="Schreib deinen Kommentar ...">
-            <a onclick="sendComment(${i})" class="send_button" href="#">
+            <a onclick="sendComment(${i})" class="send_button" href="javascript:void(0)">
                 <img src="./assets/icons/icons8-papierflieger.png" alt="">
             </a>
         </div>
