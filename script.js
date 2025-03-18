@@ -14,10 +14,8 @@ function renderBooks() {
 
 function likeButton(i) {
   document.getElementById(`heart_img${i}`).classList.toggle("liked");
-
   let countNumber = document.getElementById(`like_counter${i}`).innerHTML;
   let newLikeNumber = parseFloat(countNumber);
-
   let likedOrNot = document.getElementById(`heart_img${i}`).classList.contains("liked");
 
   if (likedOrNot == true) {

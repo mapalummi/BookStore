@@ -61,11 +61,11 @@ function getBookTemplate(i){
 function getCommentTemplate(i,j){
     return `
           <table>
-          <tr>
-            <td>[${books[i].comments[j].name}]</td>
-            <td>:</td>
-            <td>${books[i].comments[j].comment}</td>
-          </tr>
+            <tr>
+                <td>[${books[i].comments[j].name}]</td>
+                <td>:</td>
+                <td>${books[i].comments[j].comment}</td>
+            </tr>
           </table>
           `;
 }
@@ -73,11 +73,11 @@ function getCommentTemplate(i,j){
 function getInputTemplate(inputText){
     return `
         <table>
-          <tr>
-            <td>[Leser456]</td>
-            <td>:</td>
-            <td>${inputText}</td>
-          </tr>
-          </table>
+            <tr>
+                <td>[Leser456]</td>
+                <td>:</td>
+                <td>${inputText}</td>
+            </tr>
+        </table>
 `;
 }
