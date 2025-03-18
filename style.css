@@ -7,12 +7,14 @@ body {
   margin: 0;
   height: 100%;
   background-color: #05171e;
-  font-size: 14px;
+  font-family: "prompt";
+  font-size: 12px;
 }
 
 header {
   position: sticky;
   top: 0;
+  width: 100%;
   min-height: 100px;
   height: auto;
   color: white;
@@ -22,11 +24,12 @@ header {
 }
 
 .header_content {
-  width: 100%;
+  width: 90%;
   height: 80%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  padding-left: 24px;
 }
 
 .header_content img {
@@ -40,4 +43,16 @@ header {
   height: 100vh;
   display: flex;
   justify-content: center;
+}
+
+.book_container_style{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@font-face {
+  font-family: "prompt";
+  src: url(./assets/Prompt_Fonts/Prompt-Regular.ttf);
 }

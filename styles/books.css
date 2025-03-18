@@ -19,7 +19,7 @@
 
 .container1 h1 {
   margin: 0;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .container2 {
@@ -162,4 +162,23 @@
 
 .comment_content_style td {
   vertical-align: top;
+}
+
+@media (max-width: 400px){
+  .master_container_section{
+  width: 240px;
+  height: 500px;
+  margin-top: 38px;
+  margin-bottom: 0;
+  }
+
+  .container1 h1 {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .price {
+    font-size: 16px;
+    font-weight: bold;
+  }
 }
