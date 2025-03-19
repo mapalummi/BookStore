@@ -39,7 +39,6 @@ function likeButton(i) {
 
 function sendComment(i) {
   
-
   let inputText = document.getElementById(`input${i}`).value;
 
   if (inputText == "") {
@@ -50,34 +49,31 @@ function sendComment(i) {
   }
 
   saveComment(i, inputText);
-
-  
+ 
 }
 
 
 
-
+// Neue Kommentare werden ins Object gepushed:
 function saveComment(i, inputText){
   books[i].comments.push(inputText);
 
-  commentToLocalStorage();
+  saveToLocalStorage();
 }
 
 
-function commentToLocalStorage(){
+// Funktioniert - wird in String umgewandelt:
+function saveToLocalStorage(){
   localStorage.setItem("books", JSON.stringify(books));
 }
 
 
 
-
-function commentFromLocalStorage(){
+// Funktioniert noch nicht:
+function getFromLocalStorage(){
 
   JSON.parse(localStorage.getItem(books)) || [];
 
-//   if (comment != null) {
-//     newArray = myArr
-// }
 
 }
 
