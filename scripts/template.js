@@ -70,13 +70,13 @@ function getCommentTemplate(i,j){
           `;
 }
 
-function getInputTemplate(inputText){
+function getInputTemplate(comment){
     return `
         <table>
             <tr>
                 <td>[Leser456]</td>
                 <td>:</td>
-                <td>${inputText}</td>
+                <td>${comment}</td>
             </tr>
         </table>
 `;

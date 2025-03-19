@@ -173,5 +173,3 @@ let books = [
       ]
     }
   ]
-
-  let newArray = [];

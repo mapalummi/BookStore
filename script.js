@@ -1,10 +1,10 @@
 function init() {
+  getFromLocalStorage();
   renderBooks();
 }
 
 function renderBooks() {
-
-
+  document.getElementById('book_container').innerHTML = "";
 
   for (let i = 0; i < books.length; i++) {
     document.getElementById("book_container").innerHTML += getBookTemplate(i);
@@ -12,95 +12,74 @@ function renderBooks() {
     for (let j = 0; j < books[i].comments.length; j++) {
       document.getElementById(`comment_content${i}`).innerHTML += getCommentTemplate(i, j);
     }
+
+  likedOrNotliked(i);
   }
 }
 
-function likeButton(i) {
+function likedOrNotliked(i){
+  let likedProof = (books[i].liked)
+  
+  if (likedProof == true) {
+    document.getElementById(`heart_img${i}`).classList.add("liked");
+    
+  } else {
+    document.getElementById(`heart_img${i}`).classList.remove("liked");
+}
+}
+
+function likeButton(i){
   document.getElementById(`heart_img${i}`).classList.toggle("liked");
-  let countNumber = document.getElementById(`like_counter${i}`).innerHTML;
-  let newLikeNumber = parseFloat(countNumber);
+
   let likedOrNot = document.getElementById(`heart_img${i}`).classList.contains("liked");
 
-  if (likedOrNot == true) {
-    document.getElementById(`like_counter${i}`).innerHTML = /*html*/ `
-    ${newLikeNumber + 1}
-`;
-  } else {
-    document.getElementById(`like_counter${i}`).innerHTML = /*html*/ `
-    ${newLikeNumber - 1}
-`;
-  }
+if (likedOrNot == true) {
+  books[i].likes += 1
+  books[i].liked = true
+
+} else{
+  books[i].likes -= 1
+  books[i].liked = false
 }
 
-
-
-
-
+saveToLocalStorage();
+renderBooks();
+}
 
 function sendComment(i) {
-  
-  let inputText = document.getElementById(`input${i}`).value;
+  let comment = document.getElementById(`input${i}`).value;
 
-  if (inputText == "") {
+  if (comment == "") {
     alert("Bitte schreibe einen Kommentar");
+    return
   } else {
-    document.getElementById(`new_comments${i}`).innerHTML += getInputTemplate(inputText);
+    document.getElementById(`new_comments${i}`).innerHTML += getInputTemplate(comment);
     document.getElementById(`input${i}`).value = "";
   }
 
-  saveComment(i, inputText);
- 
+  saveComment(i, comment);
 }
 
-
-
-// Neue Kommentare werden ins Object gepushed:
-function saveComment(i, inputText){
-  books[i].comments.push(inputText);
+function saveComment(i, comment){
+  books[i].comments.push({name: "Leser4567", comment});
 
   saveToLocalStorage();
+  renderBooks();
 }
 
-
-// Funktioniert - wird in String umgewandelt:
 function saveToLocalStorage(){
   localStorage.setItem("books", JSON.stringify(books));
 }
 
-
-
-// Funktioniert noch nicht:
 function getFromLocalStorage(){
+  newBooks = JSON.parse(localStorage.getItem("books"));
 
-  JSON.parse(localStorage.getItem(books)) || [];
-
-
+if (newBooks != null) {
+  books = newBooks
+}
 }
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-// function saveData(i){
-//   let inputRef = document.getElementById(`input${i}`).value;
-
-//   if (inputRef.value != ""){
-//       newArray.push(inputRef.value);
-//   }
-
-//   saveToLocalStorage();
-
-//   inputRef.value = "";
-// }
