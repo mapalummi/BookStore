@@ -78,8 +78,3 @@ if (newBooks != null) {
   books = newBooks
 }
 }
-
-
-
-
-
