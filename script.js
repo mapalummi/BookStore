@@ -3,6 +3,9 @@ function init() {
 }
 
 function renderBooks() {
+
+
+
   for (let i = 0; i < books.length; i++) {
     document.getElementById("book_container").innerHTML += getBookTemplate(i);
 
@@ -29,7 +32,14 @@ function likeButton(i) {
   }
 }
 
+
+
+
+
+
 function sendComment(i) {
+  
+
   let inputText = document.getElementById(`input${i}`).value;
 
   if (inputText == "") {
@@ -38,7 +48,54 @@ function sendComment(i) {
     document.getElementById(`new_comments${i}`).innerHTML += getInputTemplate(inputText);
     document.getElementById(`input${i}`).value = "";
   }
+
+  saveComment(i, inputText);
+
+  
 }
+
+
+
+
+function saveComment(i, inputText){
+  books[i].comments.push(inputText);
+
+  commentToLocalStorage();
+}
+
+
+function commentToLocalStorage(){
+  localStorage.setItem("books", JSON.stringify(books));
+}
+
+
+
+
+function commentFromLocalStorage(){
+
+  JSON.parse(localStorage.getItem(books)) || [];
+
+//   if (comment != null) {
+//     newArray = myArr
+// }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // function saveData(i){
 //   let inputRef = document.getElementById(`input${i}`).value;
@@ -50,16 +107,4 @@ function sendComment(i) {
 //   saveToLocalStorage();
 
 //   inputRef.value = "";
-// }
-
-// function saveToLocalStorage(){
-//   localStorage.setItem("newArray", JSON.stringify(newArray));
-// }
-
-// function getFromLocalStorage(){
-//   let myArr = JSON.parse(localStorage.getItem("newArray"));
-
-//   if (myArr != null) {
-//     newArray = myArr
-// }
 // }
