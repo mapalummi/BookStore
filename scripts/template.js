@@ -3,11 +3,9 @@ function getBookTemplate(i){
     <div class="container1">
         <h1>${books[i].title}</h1>
     </div>
-
     <div class="container2">
         <img src="./assets/img/buch03.png" alt="">
     </div>
-
     <div class="container3">
         <div id="price_field" class="price">${books[i].price.toFixed(2)} €</div>
 
@@ -19,7 +17,6 @@ function getBookTemplate(i){
             </a>
         </div>
     </div>
-
     <div class="container4">
         <table>
             <tr>

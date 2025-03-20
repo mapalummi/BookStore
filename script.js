@@ -25,7 +25,7 @@ function likedOrNotliked(i){
     
   } else {
     document.getElementById(`heart_img${i}`).classList.remove("liked");
-}
+  }
 }
 
 function likeButton(i){
@@ -33,14 +33,14 @@ function likeButton(i){
 
   let likedOrNot = document.getElementById(`heart_img${i}`).classList.contains("liked");
 
-if (likedOrNot == true) {
-  books[i].likes += 1
-  books[i].liked = true
+    if (likedOrNot == true) {
+      books[i].likes += 1
+      books[i].liked = true
 
-} else{
-  books[i].likes -= 1
-  books[i].liked = false
-}
+    } else{
+      books[i].likes -= 1
+      books[i].liked = false
+  }
 
 saveToLocalStorage();
 renderBooks();
@@ -74,7 +74,7 @@ function saveToLocalStorage(){
 function getFromLocalStorage(){
   newBooks = JSON.parse(localStorage.getItem("books"));
 
-if (newBooks != null) {
-  books = newBooks
-}
+  if (newBooks != null) {
+   books = newBooks
+  }
 }
